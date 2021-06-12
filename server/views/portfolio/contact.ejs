@@ -1,0 +1,102 @@
+<!--
+*contact.ejs
+*Muksud Hussain Mahi
+*ID: 301155894
+*May 31, 2021
+-->
+<%- include ../partials/header.ejs %>
+    <%- include ../partials/main_nav.ejs %>
+        <main class="container">
+            <!--Title section-->
+            <div class="title-box text-center">
+                <h3 class="title-a">
+                    <%=title%>
+                </h3>
+                <p class="subtitle-a">
+                    Reach out should you have any questions.
+                </p>
+                <div class="line-mf"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 card-deck">
+                    <!--Contact form-->
+                    <form id="contact-form" class="card" method="get" action="/home" role="form">
+
+                        <div class="messages"></div>
+
+                        <div class="controls card-body">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name ">Firstname *</label>
+                                        <input id="form_name" type="text" name="name" class="form-control"
+                                            placeholder="Please enter your firstname *" required="required"
+                                            data-error="Firstname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname">Lastname *</label>
+                                        <input id="form_lastname" type="text" name="surname" class="form-control"
+                                            placeholder="Please enter your lastname *" required="required"
+                                            data-error="Lastname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Email *</label>
+                                        <input id="form_email" type="email" name="email" class="form-control"
+                                            placeholder="Please enter your email *" required="required"
+                                            data-error="Valid email is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="Phone">Phone *</label>
+                                        <input id="Phone" type="tel" name="Phone" class="form-control"
+                                            placeholder="Please enter your phone number *" required="required"
+                                            data-error="Valid phone number is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_message">Message *</label>
+                                        <textarea id="form_message" name="message" class="form-control"
+                                            placeholder="Message for me *" rows="4" required="required"
+                                            data-error="Please, leave us a message."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <!--Submit form button-->
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-success btn-send" id="btn-sub"
+                                        value="Send message">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                </form>
+                <div class="card-deck col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="lead"><i class="fas fa-user-alt"></i> Muksud Hussain Mahi</p>
+                            <p class="lead"><i class="fas fa-map-marker"></i> Toronto, Ontario</p>
+                            <p class="lead"><i class="fas fa-envelope"></i> mmahi1@my.centennialcollege.ca</p>
+                            <p class="lead"><i class="fas fa-phone"></i> (780) 699-7621</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include ../partials/bottom_nav.ejs %>
+            <%- include ../partials/footer.ejs %>

@@ -1,0 +1,84 @@
+<!--
+*about.ejs
+*Muksud Hussain Mahi
+*ID: 301155894
+*May 31, 2021
+-->
+<%- include ../partials/header.ejs %>
+  <%- include ../partials/main_nav.ejs %>
+    <main id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="Assets/images/me.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s"><i class="fas fa-user-alt"></i> Name: </span> <span>Muksud Hussain
+                            Mahi</span></p>
+                        <p><span class="title-s"><i class="fas fa-briefcase"></i> Profile: </span> <span>Software
+                            Developer</span></p>
+                        <p><span class="title-s"><i class="fas fa-envelope"></i> Email: </span>
+                          <span>mmahi1@my.centennialcollege.ca</span></p>
+                        <p><span class="title-s"><i class="fas fa-phone"></i> Phone: </span> <span>(780) 699-7621</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill-mf">
+                    <p class="title-s">Skill</p>
+                    <span>C#</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Java</span> <span class="pull-right">75%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Python</span> <span class="pull-right">50%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>JavaScript</span> <span class="pull-right">90%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <!--Title section-->
+
+                <div class="col-md-6">
+                  <div class="about-me pt-4 pt-md-0">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        <%=title%>
+                      </h5>
+                    </div>
+                    <p class="lead">
+                      I am a student of Software Engineering Technology at Centennial College. I have a passion for
+                      programming. I like to think out of the box when solving a problem. I am hardworking, dependable
+                      and reliable.
+                    <p><a href="/Assets/pdf/Muksud-Hussain-Mahi-Resume.pdf" class="title-s cv-a" target="_blank"><i
+                          class="fas fa-link"></i> Click here to see my resume.</a></p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include ../partials/bottom_nav.ejs %>
+      <%- include ../partials/footer.ejs %>
