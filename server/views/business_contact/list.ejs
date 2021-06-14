@@ -1,5 +1,5 @@
 <%- include ../partials/header.ejs %>
-  <%- include ../partials/main_nav.ejs %>
+    <%- include ../partials/main_nav.ejs %>
         <main class="container">
             <!--Title section-->
             <div class="title-box text-center">
@@ -9,8 +9,8 @@
                 <div class="line-mf"></div>
             </div>
             <a href="/business_contact/add" class="btn btn-primary float-left" role="button">
-            <i class="fas fa-plus-circle"></i> Add Contact</a>
-            <table class="table table-hover bg-light">
+                <i class="fas fa-plus-circle"></i> Add Contact</a>
+            <table class="table table-sort table-striped table-hover bg-light table-arrows" id="sort">
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
@@ -25,19 +25,28 @@
 
                         <!---->
                         <% for(let count=0; count<contactList.length; count++){%>
-                            <td><%= contactList[count].name %></td>
-                            <td><%= contactList[count].contact %></td>
-                            <td><%= contactList[count].email %></td>
                             <td>
-                                <a href="/business_contact/edit/<%= contactList[count]._id%>" class="btn btn-primary btn-sm">
-                                <i class="fas fa-pencil-alt"></i> Edit</a>
+                                <%= contactList[count].name %>
                             </td>
                             <td>
-                                <a href="/business_contact/delete/<%= contactList[count]._id%>" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i> Delete</a>
+                                <%= contactList[count].contact %>
                             </td>
-                        </tr>
-                        <%}%>
+                            <td>
+                                <%= contactList[count].email %>
+                            </td>
+                            <td>
+                                <a href="/business_contact/edit/<%= contactList[count]._id%>"
+                                    class="btn btn-primary btn-sm">
+                                    <i class="fas fa-pencil-alt"></i> Edit</a>
+                            </td>
+                            <td>
+                                <a href="/business_contact/delete/<%= contactList[count]._id%>"
+                                    class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i> Delete</a>
+                            </td>
+
+                    </tr>
+                    <%}%>
                 </tbody>
             </table>
         </main>

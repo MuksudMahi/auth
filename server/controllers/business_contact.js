@@ -15,7 +15,7 @@ module.exports.displayContactListPage = (req, res, next) => {
         {
             res.render('business_contact/list', {title: 'Contact List', id:'', contactList: contactList});
         }
-    });
+    }).sort({'name':1});
 }
 
 module.exports.displayAddContactPage = (req, res, next) => {
