@@ -8,23 +8,23 @@ let User = userModel.User;
 
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('portfolio/home', { title: 'Home' , id:'bg-home'});
+    res.render('portfolio/home', { title: 'Home' , id:'bg-home', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render('portfolio/about', { title: 'About Me' , id:'bg-other'});
+    res.render('portfolio/about', { title: 'About Me' , id:'bg-other', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.diplayProjectsPage = (req, res, next) => {
-    res.render('portfolio/projects', { title: 'Projects' , id:'bg-other'});
+    res.render('portfolio/projects', { title: 'Projects' , id:'bg-other',  displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayServicesPage = (req, res, next) => {
-    res.render('portfolio/services', { title: 'Services' , id:'bg-other'});
+    res.render('portfolio/services', { title: 'Services' , id:'bg-other',  displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('portfolio/contact', { title: 'Contact Me' , id:'bg-other'});
+    res.render('portfolio/contact', { title: 'Contact Me' , id:'bg-other', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayLoginPage = (req, res, next) => {

@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/"><img src="/Assets/images/my_logo.png" alt="Muksud's portfolio" height="auto"
-      width="150em" style="margin-top: -15px;"></a>
+        width="150em" style="margin-top: -15px;"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -53,6 +53,16 @@
                       <% } %>
                         <a class="nav-link" href="/contact"><i class="fas fa-phone-alt"></i> Contact Me</a>
                     </li>
+
+                    <% if(typeof displayName=='string' && displayName) {%>
+                      <li class="navbar-text"><i class="fas fa-user"></i> Welcome <%= displayName %></li>
+                      <li class="nav-item"><a href="/logout" class="nav-link">
+                      <i class="fas fa-sign-out-alt"></i> logout</a></li>
+                      <% } else { %>
+                        <li class="nav-item">
+                          <a href="/login" class="nav-link">
+                            <i class="fas-fa-sign-in-alt"></i> Login</a></li>
+                      <% } %>
       </ul>
     </div>
   </div>
