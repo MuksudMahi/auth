@@ -1,3 +1,10 @@
+/*
+*user.js
+*Muksud Hussain Mahi
+*ID: 301155894
+*June 20, 2021
+*/
+
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 
